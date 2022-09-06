@@ -31,8 +31,6 @@ function onSearch(event) {
 const handleError = () => {
     Notify.failure('Oops, there is no country with that name')
 }
-
-
 function markupOneCountry(data) {
     return data.map(country => {
         return `<img src="${country.flags.svg}" alt="Flag" width="30" height="24"></img>
@@ -40,7 +38,6 @@ function markupOneCountry(data) {
             <p>Capital: <span>${country.capital}</span></p><p>Population: <span>${country.population}</span></p><p>Languages: <span>${Object.values(country.languages)}</span></p>`
     }).join('');
 }
-
 function markupMoreCountries(data) {
     return data.map(country => {
         return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="20" height="16"></img>${country.name.official}</li>`
@@ -57,7 +54,6 @@ function renderMarkup(data) {
         Notify.info('Too many matches found. Please enter a more specific name.')
     }
 }
-
 function clearPage() {
     refs.divInfo.innerHTML = '';
     refs.ulList.innerHTML = '';
