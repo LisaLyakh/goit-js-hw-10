@@ -43,7 +43,6 @@ function markupMoreCountries(data) {
         return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="20" height="16"></img>${country.name.official}</li>`
     }).join('');
 }
-
 function renderMarkup(data) {
     clearPage();
     if (data.length === 1) {
